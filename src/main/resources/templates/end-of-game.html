@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Black Jack</title>
+</head>
+
+<body>
+	<h3 align="center">Croupiers Cards:</h3>
+	<div align="center">
+		
+		<span id="hiddenCard"></span>
+		<span th:each="tempCard: ${gameTable.getCroupiersCards()}">
+			<img th:src="${tempCard.cardView}" alt="error" />
+		</span>
+		<br><br>
+		<h5>Croupiers sum: </h5>
+		<h5 th:text="${gameTable.croupiersCardsSum()}"></h5>
+	</div>
+	
+	
+	<br><br>
+	<hr>
+	<br><br>
+	
+	
+	<h3 align="center">Players Cards:</h3>
+	<div align="center">
+		<span th:each="tempCard: ${gameTable.getPlayersCards()}">
+			<img th:src="${tempCard.cardView}" alt="error" />
+		</span>
+		<br><br>
+		<h5>Players sum: </h5>
+		<h5 th:text="${gameTable.playersCardsSum()}"></h5>
+		
+	</div>
+
+	<!-- Add buttons -->
+	<br><br>
+	<div align="center">
+		<a th:href="@{/bet}"
+		class="btn btn-primary btn-sm mb-3">
+		New Game
+		</a>
+	</div>
+
+
+
+</body>
+</html>
