@@ -29,6 +29,8 @@ public class Deck {
 		return deck.get(number);
 	}
 	
+	// DO POPRAWY
+	
 	// method for getting card out of the deck
 	public Card getCardFromDeck() {
 		int random = (int)(Math.random() * numberOfCardsLeft());
