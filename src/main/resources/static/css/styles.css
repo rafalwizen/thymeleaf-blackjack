@@ -1,0 +1,10 @@
+body {
+	background-image: url("/images/pool_table.jpg");
+	/* Background pattern from Toptal Subtle Patterns Toptal.com*/
+}
+
+.card {
+	width: 72px;
+    height: 96px;
+}
+
